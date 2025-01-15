@@ -84,8 +84,7 @@ class LocalNotificationService {
     } else if (defaultTargetPlatform == TargetPlatform.android) {
       final notificationEnabled = await _isAndroidPermissionGranted();
       if (!notificationEnabled) {
-        final requestNotificationsPermission =
-            await _requestAndroidNotificationsPermission();
+        final requestNotificationsPermission = await _requestAndroidNotificationsPermission();
         final requestAlarmEnabled = await _requestExactAlarmsPermission();
         return requestNotificationsPermission;
       }
