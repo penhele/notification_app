@@ -24,7 +24,7 @@ void main() async {
     MultiProvider(
       providers: [
         Provider(
-          create: (context) => LocalNotificationService()..init(),
+          create: (context) => LocalNotificationService()..init()..configureLocalTimeZone(),
         ),
         ChangeNotifierProvider(
           create: (context) => LocalNotificationProvider(
